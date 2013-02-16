@@ -1,0 +1,51 @@
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.table_to_div.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+  jQuery(function() {  
+    $(".whatever").table_to_div({prefix:'dude',target:'#put_it_here'});
+  }); 
+</script>
+
+<div id="put_it_here"></div>
+
+<table class="whatever">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <td>Company</td>
+    <td>Path to Image</td>
+    <td>Address</td>
+    <td>Address 2</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Zip</td>
+  </tr>
+  <tr>
+    <td>Ryan</td>
+    <td>Doom</td>
+    <td>Web Ascender</td>
+    <td>/whatever/something.jpg</td>
+    <td>4151 Okemos Rd</td>
+    <td>STE B</td>
+    <td>Okemos</td>
+    <td>Michigan</td>
+    <td>48864</td>    
+  </tr>
+  <tr>
+    <td>James</td>
+    <td>Doom</td>
+    <td>Web Ascender</td>
+    <td>/images/whatever.jpg</td>
+    <td>4151 Okemes Road.</td>
+    <td>STE B.</td>
+    <td>Okemos</td>
+    <td>MI</td>
+    <td>48864</td>
+  </tr>
+</body>
+</html>
