@@ -72,26 +72,80 @@ Currently designed where the leading row is always a header row.
 Conversion of the above table.  Right now it removes the spaces out of the heading rows, but a future change may be to remove any invalid characters for a class element.
 
   <div class="my_div_container">
-    <div class="my_div_1">
-      <div class="my_div_FirstName">Ryan</div>
-      <div class="my_div_LastName">Doom</div>
-      <div class="my_div_Company">Web Ascender</div>
-      <div class="my_div_ImagePath">/whatever/something.jpg</div>
-      <div class="my_div_Address">4151 Okemos Rd</div>
-      <div class="my_div_Address2">STE B</div>
-      <div class="my_div_City">Okemos</div>
-      <div class="my_div_State">Michigan</div>
-      <div class="my_div_Zip">48864</div>
-    </div>
-    <div class="my_div_2">
-      <div class="my_div_FirstName">John</div>
-      <div class="my_div_LastName">Doe</div>
-      <div class="my_div_Company">Web Ascender</div>
-      <div class="my_div_ImagePath">/images/whatever.jpg</div>
-      <div class="my_div_Address">4151 Okemes Road.</div>
-      <div class="my_div_Address2">STE B.</div>
-      <div class="my_div_City">Okemos</div>
-      <div class="my_div_State">MI</div>
-      <div class="my_div_Zip">48864</div>
-    </div>
+     <div class="my_div_1 my_div_group">
+        <div class="my_div_FirstName my_div_row">
+           <label>First Name</label>
+           <span>Ryan</span>
+        </div>
+        <div class="my_div_LastName my_div_row">
+           <label>Last Name</label>
+           <span>Doom</span>
+        </div>
+        <div class="my_div_Company my_div_row">
+           <label>Company</label>
+           <span>Web Ascender</span>
+        </div>
+        <div class="my_div_ImagePath my_div_row">
+           <label>Image Path</label>
+           <span>/whatever/something.jpg</span>
+        </div>
+        <div class="my_div_Address my_div_row">
+           <label>Address</label>
+           <span>4151 Okemos Rd</span>
+        </div>
+        <div class="my_div_Address2 my_div_row">
+           <label>Address 2</label>
+           <span>STE B</span>
+        </div>
+        <div class="my_div_City my_div_row">
+           <label>City</label>
+           <span>Okemos</span>
+        </div>
+        <div class="my_div_State my_div_row">
+           <label>State</label>
+           <span>Michigan</span>
+        </div>
+        <div class="my_div_Zip my_div_row">
+           <label>Zip</label>
+           <span>48864</span>
+        </div>
+     </div>
+     <div class="my_div_2 my_div_group">
+        <div class="my_div_FirstName my_div_row">
+           <label>First Name</label>
+           <span>John</span>
+        </div>
+        <div class="my_div_LastName my_div_row">
+           <label>Last Name</label>
+           <span>Doe</span>
+        </div>
+        <div class="my_div_Company my_div_row">
+           <label>Company</label>
+           <span>Web Ascender</span>
+        </div>
+        <div class="my_div_ImagePath my_div_row">
+           <label>Image Path</label>
+           <span>/images/whatever.jpg</span>
+        </div>
+        <div class="my_div_Address my_div_row">
+           <label>Address</label>
+           <span>4151 Okemes Road.</span>
+        </div>
+        <div class="my_div_Address2 my_div_row">
+           <label>Address 2</label>
+           <span>STE B.</span>
+        </div>
+        <div class="my_div_City my_div_row">
+           <label>City</label>
+           <span>Okemos</span>
+        </div>
+        <div class="my_div_State my_div_row">
+           <label>State</label>
+           <span>MI</span>
+        </div>
+        <div class="my_div_Zip my_div_row">
+           <label>Zip</label>
+           <span>48864</span>
+        </div>
+     </div>
   </div>
