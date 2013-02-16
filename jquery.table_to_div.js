@@ -1,15 +1,15 @@
   (function($) {
     $.fn.table_to_div = function(options) {
       var settings = $.extend({}, {prefix: 'tg',target:''}, options);
-      return this.each(function() {            
+      return this.each(function() {   
         var output = "";
         var data = "";
         settings.prefix = settings.prefix+"_";
         columns = [];
-        table_target = ".whatever";
+        table_target = $(this);
         var tr_count=0;
         //LOOP OVER ALL ROWS
-        $(table_target+' tr').each(function(){
+        $(table_target).find('tr').each(function(){
           var col_count = 0;
           //LOW OVER EACH COLUMN IN THE ROW
           $(this).find('th,td').each(function(){        

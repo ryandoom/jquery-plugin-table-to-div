@@ -4,10 +4,94 @@ This plugin was developed to convert tabular output into divs for more control o
 
 This is a quick little way to just convert the table.
 
-=== Usage
+=== JavaScript Usage
+Select the table you want to convert
+
+.table_to_div() takes two optional arguments.
+
+prefix:  which will prefix your divs with something you select, or if you leave it empty it will prefix everything with tg
+
+target: if you specify a target it will add the div conversion into that target element. This would most likely be an id or class for another div on the page.
+
+If left empty the divs will be added before your table.
 
   <script type="text/javascript">
-    jQuery(function() {
-      $(".my_table").table_to_div({prefix:'dude',target:'#place_converted_data_should_go'});
-    });
+    jQuery(function() {      
+      $(".my_table").table_to_div({prefix:'my_div',target:'#place_converted_data_should_go'});
+
+      //$(".my_table").hide();
+    }); 
   </script>
+
+
+=== Example Target HTML
+
+Example here has mixed th / td in the header row to support both syntax.
+Currently designed where the leading row is always a header row.
+
+  <div id="place_converted_data_should_go"></div>
+
+  <table class="my_table">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <td>Company</td>
+      <td>Image Path</td>
+      <td>Address</td>
+      <td>Address 2</td>
+      <td>City</td>
+      <td>State</td>
+      <td>Zip</td>
+    </tr>
+    <tr>
+      <td>Ryan</td>
+      <td>Doom</td>
+      <td>Web Ascender</td>
+      <td>/whatever/something.jpg</td>
+      <td>4151 Okemos Rd</td>
+      <td>STE B</td>
+      <td>Okemos</td>
+      <td>Michigan</td>
+      <td>48864</td>    
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>Web Ascender</td>
+      <td>/images/whatever.jpg</td>
+      <td>4151 Okemes Road.</td>
+      <td>STE B.</td>
+      <td>Okemos</td>
+      <td>MI</td>
+      <td>48864</td>
+    </tr>
+  </table>
+
+=== Example Output
+
+Conversion of the above table.  Right now it removes the spaces out of the heading rows, but a future change may be to remove any invalid characters for a class element.
+
+  <div class="my_div_container">
+    <div class="my_div_1">
+      <div class="my_div_FirstName">Ryan</div>
+      <div class="my_div_LastName">Doom</div>
+      <div class="my_div_Company">Web Ascender</div>
+      <div class="my_div_ImagePath">/whatever/something.jpg</div>
+      <div class="my_div_Address">4151 Okemos Rd</div>
+      <div class="my_div_Address2">STE B</div>
+      <div class="my_div_City">Okemos</div>
+      <div class="my_div_State">Michigan</div>
+      <div class="my_div_Zip">48864</div>
+    </div>
+    <div class="my_div_2">
+      <div class="my_div_FirstName">John</div>
+      <div class="my_div_LastName">Doe</div>
+      <div class="my_div_Company">Web Ascender</div>
+      <div class="my_div_ImagePath">/images/whatever.jpg</div>
+      <div class="my_div_Address">4151 Okemes Road.</div>
+      <div class="my_div_Address2">STE B.</div>
+      <div class="my_div_City">Okemos</div>
+      <div class="my_div_State">MI</div>
+      <div class="my_div_Zip">48864</div>
+    </div>
+  </div>
