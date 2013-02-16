@@ -149,3 +149,10 @@ Conversion of the above table.  Right now it removes the spaces out of the headi
         </div>
      </div>
   </div>
+
+=== Common Usage
+
+* Convert tabular data into div tags
+* Transform a table into div
+* Javascript to convert a table to div tags
+* jQuery to convert table to div or span tags
