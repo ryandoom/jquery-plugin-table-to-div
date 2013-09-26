@@ -8,6 +8,9 @@
         columns = [];
         table_target = $(this);
         var tr_count=0;
+        if(options.noheader==true){
+          tr_count = 1;
+        }
         //LOOP OVER ALL ROWS
         $(table_target).find('tr').each(function(){
           var col_count = 0;
